@@ -1,4 +1,4 @@
-# seldamar.github.io
+# selinozdamarr.github.io
 
 Personal academic website for the 2026–27 economics job market. Plain HTML and CSS, no build step.
 
@@ -10,7 +10,7 @@ Personal academic website for the 2026–27 economics job market. Plain HTML and
 
 ## Publish on GitHub Pages
 
-1. Create a GitHub account if you don't have one, then create a **public** repository named exactly `seldamar.github.io`.
+1. Create a GitHub account if you don't have one, then create a **public** repository named exactly `selinozdamarr.github.io`.
 2. From this folder run:
 
    ```bash
@@ -18,12 +18,12 @@ Personal academic website for the 2026–27 economics job market. Plain HTML and
    git add .
    git commit -m "Job market website"
    git branch -M main
-   git remote add origin https://github.com/seldamar/seldamar.github.io.git
+   git remote add origin https://github.com/selinozdamarr/selinozdamarr.github.io.git
    git push -u origin main
    ```
 
 3. In the repository on GitHub go to **Settings → Pages**, set Source to *Deploy from a branch*, branch `main`, folder `/ (root)`, and save.
-4. After a minute the site is live at `https://seldamar.github.io`.
+4. After a minute the site is live at `https://selinozdamarr.github.io`.
 
 ## Updating
 
