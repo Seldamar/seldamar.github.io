@@ -93,14 +93,15 @@
     align-self: start;
     display: flex;
     flex-direction: column;
-    gap: 28px;
+    gap: 24px;
   }
   .portrait {
-    width: 100%;
+    width: 132px;
     height: auto;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 1;
     object-fit: cover;
-    border-radius: 6px;
+    object-position: 50% 20%;
+    border-radius: 8px;
     background: var(--line);
   }
   .who h1 { font-size: 28px; font-weight: 700; line-height: 1.15; }
@@ -250,18 +251,14 @@
   .kv h3 { font-family: var(--display); font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
   .kv p { font-size: 15.5px; color: var(--ink-2); }
 
-  .refs { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; max-width: 72ch; }
-  .refs li { font-size: 15.5px; }
-  .refs .nm { font-family: var(--display); font-weight: 600; color: var(--ink); }
-  .refs .af { color: var(--muted); font-size: 14.5px; }
 
   footer { margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13.5px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
 
   /* mobile */
   @media (max-width: 860px) {
     .layout { grid-template-columns: 1fr; gap: 44px; padding: 32px 22px 72px; }
-    .side { position: static; display: grid; grid-template-columns: 120px minmax(0,1fr); gap: 16px 22px; align-items: start; }
-    .portrait { aspect-ratio: 1; border-radius: 8px; }
+    .side { position: static; display: grid; grid-template-columns: 96px minmax(0,1fr); gap: 16px 22px; align-items: start; }
+    .portrait { width: 96px; }
     .who { align-self: center; }
     .who h1 { font-size: 24px; }
     nav { grid-column: 1 / -1; }
@@ -328,7 +325,7 @@
         <article class="paper">
           <h3>Public versus Private Health Spending in the Growth–Inequality–Poverty Nexus</h3>
           <div class="meta"><span>REM Working Paper 0411/2026</span><span>March 2026</span></div>
-          <p class="abstract">Promoting inclusive growth, which is economic progress that reduces poverty and inequality, remains a core objective of development policy across country contexts. Growth alone, however, does not guarantee equitable outcomes. This paper examines how public and private health expenditures shape the interrelated dynamics of economic growth, income inequality, and poverty, and how these effects differ across country income groups. I estimate a system of three simultaneous equations linking growth, inequality, poverty, and health expenditures by three-stage least squares on a balanced panel of 117 countries over 2000–2021. Public health expenditure contributes positively to inclusive growth, chiefly by reducing inequality and poverty, with the strongest effects in emerging and low-income economies. Heavy reliance on out-of-pocket payments is instead associated with weaker poverty reduction and rising inequality. The findings integrate health financing into the analysis of inclusive development and point to the redistributive capacity of health systems as a foundation for sustainable and equitable growth.</p>
+          <p class="abstract">For the distribution of income, how a country finances health care may matter more than how much it spends. This paper estimates economic growth, income inequality, and household welfare as a simultaneous three-equation system, using three-stage least squares with country fixed effects on a panel of 94 countries over 2000–2023, and separates public from private health expenditure throughout. Identification comes from within-country variation, which removes the permanent differences between countries that confound cross-country comparisons. Public and private health spending are both associated with higher output, with similar elasticities, but they diverge on distribution: public spending is associated with lower income inequality and a lower poverty headcount, while private, largely out-of-pocket spending shows no association with inequality and is associated with higher poverty. These distributional associations are concentrated in emerging-market and low-income economies, where public financing displaces out-of-pocket payments, and are absent in advanced economies with near-universal coverage. Several associations reverse sign in cross-country estimation, indicating that cross-sectional designs can misattribute permanent country differences to health policy. The composition of health financing, not only its level, shapes distributional outcomes.</p>
           <p class="jel"><b>JEL</b> I15 · I14 · I32 · H51 · O47</p>
           <div class="links">
             <a href="https://rem.rc.iseg.ulisboa.pt/wps/pdf/REM_WP_0411_2026.pdf" target="_blank" rel="noopener">Working paper (PDF)</a>
@@ -345,7 +342,7 @@
       <article class="paper">
         <h3>Pandemics, Inequality, and the Public Health Expenditure Buffer: Evidence from Five Epidemics and COVID-19</h3>
         <div class="meta"><span>REM Working Paper 0412/2026</span><span>March 2026</span></div>
-        <p class="abstract">Pandemics hit vulnerable groups the hardest, yet there is limited evidence on how public health spending mitigates these unequal impacts. This paper traces the dynamic response of inclusive growth, measured through GDP per capita, disposable-income inequality, and household consumption, to pandemic shocks in low- and high-public-health-spending environments. Using local projections on a balanced panel of 114 countries over 2000–2019, I find that pandemics trigger significant and persistent losses in output and consumption, particularly in low-income economies. Disposable-income inequality responds little, but sharp declines in consumption reveal welfare losses that aggregate income measures miss. High public health expenditure acts as an automatic stabilizer: countries with robust health financing show minimal economic scarring, while low-spending regimes suffer deep and lasting contractions.</p>
+        <p class="abstract">Do countries that invest in public health before a pandemic suffer less economic damage when one arrives? We estimate the dynamic effects of pandemic shocks on GDP per capita, the disposable-income Gini, and household consumption using local projections on 138 countries over 2000 to 2019, with shocks weighted by within-episode severity and the sample extended to 2023 for COVID-19. Three results emerge. First, pandemics durably widen the income distribution: the Gini rises by half a point within five years, in every specification we examine, with the increase concentrated in emerging markets. Output and consumption losses are conditional, appearing when outbreaks are severe and once financial crisis variation is removed. Second, the finding that high-spending countries fare worse is an artifact of the 2009 overlap between H1N1 and the global financial crisis; correcting it reverses the sign, but the pre-COVID episodes are too few for a significant result. Third, COVID-19 provides the test the earlier episodes cannot: countries with low predetermined health spending lost 3.4 to 3.5 percent of GDP, while high-spending countries show no significant loss. This protection is specific to public health spending and does not appear for private spending. It also has a limit: inequality rises no matter how much countries spend.</p>
         <p class="jel"><b>JEL</b> I15 · I18 · O47 · E62 · H51</p>
         <div class="links">
           <a href="https://rem.rc.iseg.ulisboa.pt/wps/pdf/REM_WP_0412_2026.pdf" target="_blank" rel="noopener">Working paper (PDF)</a>
@@ -356,6 +353,7 @@
       <article class="paper">
         <h3>Out-of-Pocket Health Spending and Income Inequality in the United States: Threshold Effects and Structural Change</h3>
         <div class="meta"><span class="in-progress">Work in progress</span><span>Third dissertation essay</span></div>
+        <p class="abstract">Income inequality across US states has risen to historic highs, and the channels driving it remain incompletely understood. This paper examines a channel that has received limited empirical attention: the financing of health care through out-of-pocket (OOP) payments. Using a balanced panel of 51 US states over 2004–2019, we apply the Hansen (1999) fixed-effect panel threshold model with OOP burden measured relative to household capacity to pay (CTP) and ask whether the relationship between OOP burden and inequality is regime-dependent. We document two complementary findings. First, the marginal inequality effect of OOP burden exhibits a statistically significant regime shift at 11.84% of CTP, a level well below the conventional 40% catastrophic-spending threshold, with an effect approximately 17% larger above this level than below. Second, the strength of this channel has not been stable over time: the marginal inequality effect of OOP burden fell by roughly half around 2009, a shift that appears under both burden measures and is better characterized as a discrete break than a gradual decline. We find no additional shift at the 2014 implementation of the Affordable Care Act and no differential decline in Medicaid-expansion states, indicating that the weakening of the channel predates the ACA. These results indicate that the distributional consequences of OOP financing begin to intensify well within the moderate, non-catastrophic burden, and that the channel is time-varying in ways that existing policy-attribution narratives do not capture.</p>
       </article>
 
       <h2 style="margin-top:48px">Master's dissertation</h2>
@@ -436,10 +434,6 @@
         <p>Email is the best way to reach me: <a href="mailto:s.ozdamarr@gmail.com">s.ozdamarr@gmail.com</a>. I am based in Lisbon and happy to talk by video call at any time zone.</p>
         <p>Lisbon School of Economics and Management (ISEG), Universidade de Lisboa<br>Rua do Quelhas 6, 1200-781 Lisbon, Portugal</p>
       </div>
-      <h2 style="margin-top:36px; font-size:20px">References</h2>
-      <ul class="refs">
-        <li><span class="nm">Prof. João Jalles</span><br><span class="af">ISEG, Universidade de Lisboa (supervisor)</span></li>
-      </ul>
     </section>
 
     <footer>
