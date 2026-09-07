@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Selin Ozdamar</title>
+<meta name="description" content="Selin Ozdamar is a PhD candidate in Economics at ISEG, Universidade de Lisboa, on the 2026–27 job market. Health economics, public finance, inclusive growth.">
+<meta property="og:title" content="Selin Ozdamar">
+<meta property="og:description" content="PhD candidate in Economics, ISEG – Universidade de Lisboa. Health economics, public finance, inclusive growth. On the 2026–27 job market.">
+<meta property="og:image" content="assets/photo.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230F6E63'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='17' font-weight='700' fill='white' text-anchor='middle'%3ESO%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root {
+    --bg: #F7F8F9;
+    --surface: #FFFFFF;
+    --ink: #16191D;
+    --ink-2: #454B53;
+    --muted: #6B727C;
+    --line: #DFE3E7;
+    --line-strong: #C7CDD3;
+    --accent: #0F6E63;
+    --accent-ink: #0B5A51;
+    --accent-soft: #E3F1EE;
+    --display: "Manrope", "Segoe UI", system-ui, sans-serif;
+    --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+    --mono: "IBM Plex Mono", "Cascadia Mono", Consolas, monospace;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #121417;
+      --surface: #191C20;
+      --ink: #E8EAED;
+      --ink-2: #C3C8CF;
+      --muted: #8E959E;
+      --line: #272B31;
+      --line-strong: #363B43;
+      --accent: #4FB8AA;
+      --accent-ink: #7ACDC2;
+      --accent-soft: #16302D;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #121417;
+    --surface: #191C20;
+    --ink: #E8EAED;
+    --ink-2: #C3C8CF;
+    --muted: #8E959E;
+    --line: #272B31;
+    --line-strong: #363B43;
+    --accent: #4FB8AA;
+    --accent-ink: #7ACDC2;
+    --accent-soft: #16302D;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent-ink); text-decoration: none; }
+  a:hover { text-decoration: underline; text-underline-offset: 3px; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+  h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; letter-spacing: -0.01em; }
+  p { margin: 0; }
+  img { max-width: 100%; display: block; }
+
+  .layout {
+    display: grid;
+    grid-template-columns: 300px minmax(0, 1fr);
+    gap: 72px;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 56px 40px 96px;
+  }
+
+  /* ---------- sidebar ---------- */
+  .side {
+    position: sticky;
+    top: 56px;
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+  .portrait {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 6px;
+    background: var(--line);
+  }
+  .who h1 { font-size: 28px; font-weight: 700; line-height: 1.15; }
+  .who .role { margin-top: 8px; color: var(--ink-2); font-size: 15.5px; line-height: 1.45; }
+  .who .role strong { font-weight: 500; color: var(--ink); }
+  .market {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 14px;
+    padding: 5px 10px 5px 8px;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent-ink);
+    font-family: var(--display);
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .market::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+
+  nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
+  nav a {
+    display: block;
+    padding: 6px 0;
+    color: var(--ink-2);
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 15px;
+    border-left: 2px solid transparent;
+    padding-left: 12px;
+    margin-left: -14px;
+  }
+  nav a:hover { color: var(--ink); text-decoration: none; }
+  nav a.active { color: var(--accent-ink); border-left-color: var(--accent); }
+
+  .contact { font-size: 14.5px; color: var(--ink-2); display: flex; flex-direction: column; gap: 6px; }
+  .contact a { color: var(--ink); }
+  .cv-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 6px;
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 14.5px;
+    width: fit-content;
+    transition: background .15s;
+  }
+  .cv-btn:hover { background: var(--accent-ink); text-decoration: none; color: #fff; }
+  .cv-btn svg { width: 15px; height: 15px; }
+  :root[data-theme="dark"] .cv-btn, :root[data-theme="dark"] .cv-btn:hover { color: #0F1513; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .cv-btn, :root:not([data-theme="light"]) .cv-btn:hover { color: #0F1513; }
+  }
+
+  /* ---------- main ---------- */
+  main { display: flex; flex-direction: column; gap: 72px; min-width: 0; }
+  section { scroll-margin-top: 40px; }
+  .eyebrow {
+    font-family: var(--display);
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 14px;
+  }
+  h2 { font-size: 26px; font-weight: 700; margin-bottom: 20px; }
+  .prose { max-width: 66ch; display: flex; flex-direction: column; gap: 16px; color: var(--ink-2); }
+  .prose p { font-size: 17px; }
+  .lede { font-size: 21px !important; line-height: 1.5; color: var(--ink) !important; font-weight: 400; }
+
+  .interests { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+  .interests span {
+    padding: 5px 11px;
+    border: 1px solid var(--line-strong);
+    border-radius: 999px;
+    font-size: 13.5px;
+    color: var(--ink-2);
+  }
+
+  /* paper */
+  .paper { display: grid; grid-template-columns: minmax(0,1fr); gap: 14px; }
+  .paper + .paper { margin-top: 36px; padding-top: 36px; border-top: 1px solid var(--line); }
+  .paper h3 { font-size: 20px; font-weight: 600; line-height: 1.3; }
+  .paper .meta {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+  }
+  .paper .abstract { max-width: 68ch; color: var(--ink-2); }
+  .paper .links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+  .paper .links a {
+    font-family: var(--display);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border: 1px solid var(--line-strong);
+    border-radius: 6px;
+    color: var(--ink);
+    transition: border-color .15s, background .15s;
+  }
+  .paper .links a:hover { border-color: var(--accent); background: var(--accent-soft); text-decoration: none; }
+  .jel { font-family: var(--mono); font-size: 13px; color: var(--muted); }
+  .jel b { font-weight: 500; color: var(--ink-2); }
+  .jmp-frame {
+    padding: 28px 30px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    border-radius: 6px;
+  }
+  .jmp-frame .paper h3 { font-size: 23px; }
+  .in-progress { font-family: var(--display); font-size: 12.5px; font-weight: 600; color: var(--muted); letter-spacing: 0.04em; text-transform: uppercase; }
+
+  /* lists */
+  .timeline { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+  .timeline li {
+    display: grid;
+    grid-template-columns: 60px minmax(0,1fr);
+    gap: 20px;
+    padding: 12px 0;
+    border-top: 1px solid var(--line);
+    font-size: 15.5px;
+  }
+  .timeline li:last-child { border-bottom: 1px solid var(--line); }
+  .timeline .yr { font-family: var(--mono); font-size: 13.5px; color: var(--muted); padding-top: 2px; font-variant-numeric: tabular-nums; }
+  .timeline .what { color: var(--ink); }
+  .timeline .where { color: var(--muted); font-size: 14.5px; }
+
+  .edu { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 20px; max-width: 66ch; }
+  .edu li { display: grid; grid-template-columns: 96px minmax(0,1fr); gap: 20px; }
+  .edu .yr { font-family: var(--mono); font-size: 13.5px; color: var(--muted); padding-top: 3px; }
+  .edu .deg { font-family: var(--display); font-weight: 600; font-size: 16.5px; }
+  .edu .inst { color: var(--ink-2); font-size: 15.5px; }
+  .edu .note { color: var(--muted); font-size: 14.5px; margin-top: 2px; }
+
+  .two-col { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 32px 40px; max-width: 72ch; }
+  .kv h3 { font-family: var(--display); font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+  .kv p { font-size: 15.5px; color: var(--ink-2); }
+
+  .refs { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; max-width: 72ch; }
+  .refs li { font-size: 15.5px; }
+  .refs .nm { font-family: var(--display); font-weight: 600; color: var(--ink); }
+  .refs .af { color: var(--muted); font-size: 14.5px; }
+
+  footer { margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13.5px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+
+  /* mobile */
+  @media (max-width: 860px) {
+    .layout { grid-template-columns: 1fr; gap: 44px; padding: 32px 22px 72px; }
+    .side { position: static; display: grid; grid-template-columns: 120px minmax(0,1fr); gap: 16px 22px; align-items: start; }
+    .portrait { aspect-ratio: 1; border-radius: 8px; }
+    .who { align-self: center; }
+    .who h1 { font-size: 24px; }
+    nav { grid-column: 1 / -1; }
+    nav ul { flex-direction: row; flex-wrap: wrap; gap: 4px 18px; }
+    nav a { border-left: 0; padding-left: 0; margin-left: 0; padding: 4px 0; }
+    nav a.active { border-bottom: 2px solid var(--accent); }
+    .contact { grid-column: 1 / -1; }
+    .side > .cv-btn { grid-column: 1 / -1; }
+    main { gap: 56px; }
+    .two-col { grid-template-columns: 1fr; }
+    .jmp-frame { padding: 20px; }
+    .edu li { grid-template-columns: 1fr; gap: 2px; }
+    .timeline li { grid-template-columns: 52px minmax(0,1fr); gap: 14px; }
+  }
+</style>
+</head>
+<body>
+<div class="layout">
+
+  <aside class="side">
+    <img class="portrait" src="assets/photo.jpg" alt="Portrait of Selin Ozdamar" width="640" height="800">
+    <div class="who">
+      <h1>Selin Ozdamar</h1>
+      <p class="role"><strong>PhD Candidate in Economics</strong><br>Lisbon School of Economics and Management (ISEG), Universidade de Lisboa</p>
+      <span class="market">2026–27 Job Market</span>
+    </div>
+    <nav aria-label="Sections">
+      <ul>
+        <li><a href="#about" class="active">About</a></li>
+        <li><a href="#jmp">Job Market Paper</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#presentations">Presentations</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="cv-btn" href="assets/Selin_Ozdamar_CV.pdf" target="_blank" rel="noopener">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v8m0 0L5 7m3 3 3-3M3 12v1.5h10V12"/></svg>
+      Curriculum Vitae
+    </a>
+    <div class="contact">
+      <a href="mailto:s.ozdamarr@gmail.com">s.ozdamarr@gmail.com</a>
+      <span>Lisbon, Portugal</span>
+    </div>
+  </aside>
+
+  <main>
+
+    <section id="about">
+      <p class="eyebrow">About</p>
+      <div class="prose">
+        <p class="lede">I am an applied economist working on health economics, public finance, and inclusive growth. I am a PhD candidate at ISEG, Universidade de Lisboa, and I will be on the 2026–27 academic job market.</p>
+        <p>My dissertation, <em>Inclusive Growth and Health Expenditures</em>, asks how the way countries finance health care shapes the joint dynamics of growth, inequality, and poverty. Using cross-country panels and structural and dynamic methods, I show that public health spending strengthens the redistributive reach of growth and buffers economies against pandemic shocks, while heavy reliance on out-of-pocket payments does the opposite. My supervisor is <a href="https://www.iseg.ulisboa.pt/" target="_blank" rel="noopener">Prof. João Jalles</a>, and my work is supported by a 2025 FCT Doctoral Scholarship.</p>
+        <p>Before returning to my doctorate I spent three years as a data analyst in industry, most recently as a Senior Marketing Analyst at Cognizant, which sharpened my applied data skills and my sense of what evidence policymakers and practitioners can actually use.</p>
+      </div>
+      <div class="interests" aria-label="Research interests">
+        <span>Health Economics</span><span>Public Finance</span><span>Inclusive Growth</span><span>Inequality and Poverty</span><span>Macroeconomic Shocks</span><span>Panel Data Econometrics</span>
+      </div>
+    </section>
+
+    <section id="jmp">
+      <p class="eyebrow">Job Market Paper</p>
+      <div class="jmp-frame">
+        <article class="paper">
+          <h3>Public versus Private Health Spending in the Growth–Inequality–Poverty Nexus</h3>
+          <div class="meta"><span>REM Working Paper 0411/2026</span><span>March 2026</span></div>
+          <p class="abstract">Promoting inclusive growth, which is economic progress that reduces poverty and inequality, remains a core objective of development policy across country contexts. Growth alone, however, does not guarantee equitable outcomes. This paper examines how public and private health expenditures shape the interrelated dynamics of economic growth, income inequality, and poverty, and how these effects differ across country income groups. I estimate a system of three simultaneous equations linking growth, inequality, poverty, and health expenditures by three-stage least squares on a balanced panel of 117 countries over 2000–2021. Public health expenditure contributes positively to inclusive growth, chiefly by reducing inequality and poverty, with the strongest effects in emerging and low-income economies. Heavy reliance on out-of-pocket payments is instead associated with weaker poverty reduction and rising inequality. The findings integrate health financing into the analysis of inclusive development and point to the redistributive capacity of health systems as a foundation for sustainable and equitable growth.</p>
+          <p class="jel"><b>JEL</b> I15 · I14 · I32 · H51 · O47</p>
+          <div class="links">
+            <a href="https://rem.rc.iseg.ulisboa.pt/wps/pdf/REM_WP_0411_2026.pdf" target="_blank" rel="noopener">Working paper (PDF)</a>
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6581098" target="_blank" rel="noopener">SSRN</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="research">
+      <p class="eyebrow">Research</p>
+      <h2>Working papers</h2>
+
+      <article class="paper">
+        <h3>Pandemics, Inequality, and the Public Health Expenditure Buffer: Evidence from Five Epidemics and COVID-19</h3>
+        <div class="meta"><span>REM Working Paper 0412/2026</span><span>March 2026</span></div>
+        <p class="abstract">Pandemics hit vulnerable groups the hardest, yet there is limited evidence on how public health spending mitigates these unequal impacts. This paper traces the dynamic response of inclusive growth, measured through GDP per capita, disposable-income inequality, and household consumption, to pandemic shocks in low- and high-public-health-spending environments. Using local projections on a balanced panel of 114 countries over 2000–2019, I find that pandemics trigger significant and persistent losses in output and consumption, particularly in low-income economies. Disposable-income inequality responds little, but sharp declines in consumption reveal welfare losses that aggregate income measures miss. High public health expenditure acts as an automatic stabilizer: countries with robust health financing show minimal economic scarring, while low-spending regimes suffer deep and lasting contractions.</p>
+        <p class="jel"><b>JEL</b> I15 · I18 · O47 · E62 · H51</p>
+        <div class="links">
+          <a href="https://rem.rc.iseg.ulisboa.pt/wps/pdf/REM_WP_0412_2026.pdf" target="_blank" rel="noopener">Working paper (PDF)</a>
+          <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6589332" target="_blank" rel="noopener">SSRN</a>
+        </div>
+      </article>
+
+      <article class="paper">
+        <h3>Out-of-Pocket Health Spending and Income Inequality in the United States: Threshold Effects and Structural Change</h3>
+        <div class="meta"><span class="in-progress">Work in progress</span><span>Third dissertation essay</span></div>
+      </article>
+
+      <h2 style="margin-top:48px">Master's dissertation</h2>
+      <article class="paper">
+        <h3>Military Expenditure and Economic Growth in the United States, 1947–2018: An Empirical Analysis</h3>
+        <div class="meta"><span>Università degli Studi di Milano</span><span>2020</span></div>
+        <p class="abstract">Quarterly US data from 1947 to 2018 are used to study the two-way relationship between defense spending and GDP growth. VAR and SVAR estimates with Granger causality tests support the growth-led hypothesis: defense spending responds to positive growth shocks, but not the reverse. An ARDL specification then isolates the effect of defense spending on growth without the identification restrictions an SVAR requires.</p>
+        <div class="meta"><span>Available on request from the University of Milan repository (Minerva)</span></div>
+      </article>
+    </section>
+
+    <section id="presentations">
+      <p class="eyebrow">Presentations</p>
+      <h2>Conferences and workshops</h2>
+      <ul class="timeline">
+        <li><span class="yr">2026</span><span><span class="what">4th CINCH–dggö Academy in Health Economics</span><br><span class="where">University of Duisburg-Essen, Germany</span></span></li>
+        <li><span class="yr">2026</span><span><span class="what">International Conference on Empirical Economics (ICEE)</span><br><span class="where">Penn State Altoona, online</span></span></li>
+        <li><span class="yr">2026</span><span><span class="what">14th UECE Conference on Economic and Financial Adjustments</span><br><span class="where">ISEG, Lisbon</span></span></li>
+        <li><span class="yr">2026</span><span><span class="what">10th International PhD Meeting in Economics</span><br><span class="where">University of Macedonia, Thessaloniki</span></span></li>
+        <li><span class="yr">2025</span><span><span class="what">13th UECE Conference on Economic and Financial Adjustments</span><br><span class="where">ISEG, Lisbon</span></span></li>
+        <li><span class="yr">2025</span><span><span class="what">EB-UMA, IV International PhD Student Conference in Economics, Business and Sociology</span><br><span class="where">University of Málaga</span></span></li>
+        <li><span class="yr">2024</span><span><span class="what">12th UECE Conference on Economic and Financial Adjustments</span><br><span class="where">ISEG, Lisbon</span></span></li>
+      </ul>
+    </section>
+
+    <section id="education">
+      <p class="eyebrow">Education</p>
+      <ul class="edu">
+        <li>
+          <span class="yr">2020 –</span>
+          <div>
+            <p class="deg">PhD in Economics</p>
+            <p class="inst">Lisbon School of Economics and Management (ISEG), Universidade de Lisboa</p>
+            <p class="note">Supervisor: Prof. João Jalles · FCT Doctoral Scholarship (2025)</p>
+          </div>
+        </li>
+        <li>
+          <span class="yr">2017 – 2020</span>
+          <div>
+            <p class="deg">MSc in Economics and Political Science</p>
+            <p class="inst">Università degli Studi di Milano</p>
+            <p class="note">Supervisors: Prof. Michele Santoni and Prof. Fabrizio Iacone · University of Milan funding</p>
+          </div>
+        </li>
+        <li>
+          <span class="yr">2012 – 2016</span>
+          <div>
+            <p class="deg">BSc in International Relations</p>
+            <p class="inst">Kadir Has University, Istanbul</p>
+            <p class="note">Erasmus exchange, University of Coimbra (2014)</p>
+          </div>
+        </li>
+      </ul>
+
+      <div class="two-col" style="margin-top:40px">
+        <div class="kv">
+          <h3>Methods</h3>
+          <p>Simultaneous equations (3SLS), GMM, local projections, panel data and fixed effects, VAR / SVAR / panel VAR, ARDL</p>
+        </div>
+        <div class="kv">
+          <h3>Software</h3>
+          <p>Stata (advanced), R, SQL, LaTeX</p>
+        </div>
+        <div class="kv">
+          <h3>Languages</h3>
+          <p>Turkish (native), English (C1), Italian (A2–B1), Portuguese (A2)</p>
+        </div>
+        <div class="kv">
+          <h3>Affiliations</h3>
+          <p>REM – Research in Economics and Mathematics; UECE – Research Unit on Complexity and Economics, ISEG</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <p class="eyebrow">Contact</p>
+      <div class="prose">
+        <p>Email is the best way to reach me: <a href="mailto:s.ozdamarr@gmail.com">s.ozdamarr@gmail.com</a>. I am based in Lisbon and happy to talk by video call at any time zone.</p>
+        <p>Lisbon School of Economics and Management (ISEG), Universidade de Lisboa<br>Rua do Quelhas 6, 1200-781 Lisbon, Portugal</p>
+      </div>
+      <h2 style="margin-top:36px; font-size:20px">References</h2>
+      <ul class="refs">
+        <li><span class="nm">Prof. João Jalles</span><br><span class="af">ISEG, Universidade de Lisboa (supervisor)</span></li>
+      </ul>
+    </section>
+
+    <footer>
+      <span>© 2026 Selin Ozdamar</span>
+      <span>Last updated September 2026</span>
+    </footer>
+  </main>
+</div>
+
+<script>
+  // Highlight the section currently in view in the sidebar nav.
+  (function () {
+    var links = Array.prototype.slice.call(document.querySelectorAll('nav a'));
+    var sections = links.map(function (a) { return document.querySelector(a.getAttribute('href')); });
+    if (!('IntersectionObserver' in window)) return;
+    var current = null;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          current = e.target.id;
+          links.forEach(function (a) { a.classList.toggle('active', a.getAttribute('href') === '#' + current); });
+        }
+      });
+    }, { rootMargin: '-30% 0px -60% 0px' });
+    sections.forEach(function (s) { if (s) io.observe(s); });
+  })();
+</script>
+</body>
+</html>
